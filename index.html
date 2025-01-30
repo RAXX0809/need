@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+
+
+  }
+
+  #particles-js {
+    width: 100%;
+    height: 100%;
+    background: url(Untitled\ design.png)no-repeat;
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+  }
+
+  h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+  }
+
+  #p1 {
+    color: rgb(245, 245, 245);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+  }
+
+  #p2 {
+    color: rgb(245, 245, 245);
+    text-align: center;
+    position: absolute;
+    top: 48%;
+    left: 15%;
+  }
+
+  #b {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    padding: 2px;
+    border-radius: 10px;
+    border-width: 0cap;
+    border: 0%;
+    align-items: center;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: left;
+    padding: 1rem;
+    position: absolute;
+    top: 1%;
+
+  }
+
+  .navbar a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+  }
+
+
+  /* .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(30, 26, 26, 0.2);
+
+  }
+
+  .card {
+    background: rgb(0, 0, 0);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+  }
+
+  .card-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #494747;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #005cbf;
+  }
+
+
+  #priya {
+    color: #ffffff;
+    position: absolute;
+    top: 105%;
+    left: 30%;
+  }
+
+  #ppri {
+    color: #ffffff;
+    position: absolute;
+    top: 111%;
+    left: 30%;
+  }
+
+  #pdf1 {
+    color: #ffffff;
+    position: absolute;
+    top: 130%;
+    left: 30%;
+  }
+
+
+  #venky {
+    color: #ffffff;
+    position: absolute;
+    top: 147%;
+    left: 30%;
+  }
+
+  #ven {
+    color: #ffffff;
+    position: absolute;
+    top: 153%;
+    left: 30%;
+  }
+
+  #pdf2 {
+    color: #ffffff;
+    position: absolute;
+    top: 172%;
+    left: 30%;
+  } */
+
+
+
+
+
+
+
+
+
+
+  .dashboard {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 80px;
+    border-radius: 20px;
+    width: 90%;
+    margin: 50px auto;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .stat-box:hover {
+    transform: scale(1.1);
+  }
+
+  .stat-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .stat-box p {
+    font-size: 28px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  #donor-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  #donor-list li {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 15px;
+    margin: 10px auto;
+    width: 70%;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #donor-list li:hover {
+    transform: scale(1.08);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .box .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ff6f61;
+    }
+
+    .box p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+
+    .box button {
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .box button:hover {
+      background-color: #ff4a3d;
+    }
+
+    /* Downside box (photo on the right) */
+    .box.downside {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .box.downside img {
+      order: 2; /* Move image to the right */
+    }
+
+    .box.downside .content {
+      order: 1; /* Move content to the left */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .box {
+        grid-template-columns: 1fr;
+      }
+
+      .box.downside img {
+        order: 1; /* Reset order for mobile */
+      }
+
+      .box.downside .content {
+        order: 2; /* Reset order for mobile */
+      }
+    }
+
+
+    
+</style>
+
+<body>
+
+
+  <h1>Your Contribution Makes a Difference.</h1>
+  <p id="p1"> Every contribution brings us closer to healing lives and making a real difference.</p>
+  <p id="p2"> Together, we can create a ripple of hope and support for those in need, one donation at a time</p>
+
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#care">Care</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#heros">Hero setion</a>
+  </div>
+
+  <button id="b">Get Started </button>
+
+  <div id="particles-js"></div>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+
+  <div class="container">
+    <!-- Upside Box -->
+    <div class="grid">
+    <div class="box">
+        <img src="Screenshot 2025-01-30 104342.png" alt="Priyanka's Photo">
+        <div class="content">
+          <h2>Meet Priyanka</h2>
+          <p>
+            Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away her dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds onto. Please help save Priyanka.
+          
+
+            <a href="html/main.html">know more about priyanka</a>
+          </p>
+        
+          <button id="b1">Donate Here</button>
+        </div>
+      </div>
+    
+      <!-- Downside Box -->
+      <div class="box downside">
+        <div class="content">
+          <h2>Meet Priyanka</h2>
+          <p>
+            Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away her dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds onto. Please help save Priyanka.
+          </p>
+          <button id="b2">Donate Here</button>
+        </div>
+        <img src="Screenshot 2025-01-30 104342.png" alt="Another Photo">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- <section id="care">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <img src="images and pdfs/WhatsApp Image 2025-01-30 at 00.30.43_0a70694e.jpg" Learning Modules">
+          <div class="card-content">
+
+            <a href="in.html" class="button">donate here</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images and pdfs/WhatsApp Image 2025-01-30 at 00.30.43_0a70694e.jpg" alt="Mock Tests">
+          <div class="card-content">
+
+            <a href="html/mock.html" class="button">donate here</a>
+          </div>
+        </div>
+
+
+        <h2 id="priya">meet priyanka a 18/F from telanaga suffering from rare cancer alvero sarcoma </h2>
+        <p id="ppri">Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a
+          rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away
+          her
+          dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment
+          is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can
+          give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds
+          onto.
+          Please help save Priyanka</p>
+
+        <a id="pdf1" href="">To know more about reports and bills click here!</a>
+
+        <h2 id="venky">meet priyanka a 18/F from telanaga suffering from rare cancer alvero sarcoma </h2>
+        <p id="ven">Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a
+          rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away
+          her
+          dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment
+          is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can
+          give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds
+          onto.
+          Please help save Priyanka</p>
+
+        <a id="pdf2" href="">To know more about reports and bills click here!</a> -->
+
+        <section></section>
+
+  </section>
+  <section class="dashboard" id="dashboard">
+    <h2>💖 Our Impact</h2>
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3>Total Collected</h3>
+        <p id="total-collected">₹0</p>
+      </div>
+      <div class="stat-box">
+        <h3>Lives Saved</h3>
+        <p id="lives-saved">0</p>
+      </div>
+      <div class="stat-box">
+        <h3>Lives Lost</h3>
+        <p id="deaths">0</p>
+      </div>
+    </div>
+
+    <h3>🌟 Recent Heroes</h3>
+    <ul id="donor-list"></ul>
+  </section>
+
+  <script>
+
+
+
+
+document.getElementById('b1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    window.location.href = 'html/in.html'; // Redirect to the roadmap page
+});
+
+document.getElementById('b2').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'html/in.html'; // Replace with the actual page link
+});
+
+document.getElementById('b').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'care'; // Replace with the actual page link
+});
+
+document.getElementById('drawing-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'drawiing.html'; // Replace with the actual page link
+});
+
+
+
+    let totalCollected = 0;
+    let livesSaved = 0;
+    let deaths = 0;
+    let donors = [];
+
+    function animateCounter(id, endValue) {
+      let element = document.getElementById(id);
+      let startValue = 0;
+      let duration = 1000;
+      let interval = 20;
+      let increment = endValue / (duration / interval);
+
+      let counter = setInterval(() => {
+        startValue += increment;
+        if (startValue >= endValue) {
+          clearInterval(counter);
+          element.innerText = `₹${endValue.toLocaleString()}`;
+        } else {
+          element.innerText = `₹${Math.floor(startValue).toLocaleString()}`;
+        }
+      }, interval);
+    }
+
+    function updateDashboard() {
+      animateCounter("total-collected", totalCollected);
+      document.getElementById("lives-saved").innerText = livesSaved;
+      document.getElementById("deaths").innerText = deaths;
+
+      let donorList = document.getElementById("donor-list");
+      donorList.innerHTML = "";
+      donors.forEach(donor => {
+        let li = document.createElement("li");
+        li.innerText = `💙 Thank you, ${donor}!`;
+        donorList.appendChild(li);
+      });
+    }
+
+    function addDonation(amount, donorName) {
+      totalCollected += amount;
+      donors.unshift(donorName);
+      if (donors.length > 5) donors.pop();
+      updateDashboard();
+    }
+
+    // updateDashboard();
+    // setTimeout(() => {
+    //     addDonation(10000, "Sanjay");
+    // }, 5000);
+
+    // updateDashboard();
+    // setTimeout(() => {
+    //     addDonation(102, "rahul");
+    // }, 5000)
+  </script>
+
+
+</body>
+
+</html>

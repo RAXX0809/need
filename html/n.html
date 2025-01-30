@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Section</title>
+  <style>
+    * {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .box .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ff6f61;
+    }
+
+    .box p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+
+    .box button {
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .box button:hover {
+      background-color: #ff4a3d;
+    }
+
+    /* Downside box (photo on the right) */
+    .box.downside {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .box.downside img {
+      order: 2; /* Move image to the right */
+    }
+
+    .box.downside .content {
+      order: 1; /* Move content to the left */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .box {
+        grid-template-columns: 1fr;
+      }
+
+      .box.downside img {
+        order: 1; /* Reset order for mobile */
+      }
+
+      .box.downside .content {
+        order: 2; /* Reset order for mobile */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Upside Box -->
+    <div class="grid">
+      <div class="box">
+        <img src="https://via.placeholder.com/400" alt="Priyanka's Photo">
+        <div class="content">
+          <h2>Meet Priyanka</h2>
+          <p>
+            Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away her dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds onto. Please help save Priyanka.
+          </p>
+          <button>Donate Here</button>
+        </div>
+      </div>
+
+      <!-- Downside Box -->
+      <div class="box downside">
+        <div class="content">
+          <h2>Meet Priyanka</h2>
+          <p>
+            Priyanka, an 18-year-old girl from Hyderabad, Telangana, is battling Alveolar Soft Part Sarcoma, a rare and aggressive form of cancer. Despite her strength and resilience, the disease threatens to take away her dreams and the life she deserves. Her family is doing everything possible, but the estimated cost of treatment is ₹30 lakhs—an amount far beyond their reach. Every passing moment is crucial, and with your support, we can give Priyanka a fighting chance. Your kindness can bring hope, healing, and a future she desperately holds onto. Please help save Priyanka.
+          </p>
+          <button>Donate Here</button>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Another Photo">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

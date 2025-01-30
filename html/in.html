@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ .donation-options {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 15px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.donation-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.donation-form input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.donation-form button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.donation-form button:hover {
+    background-color: #e68900;
+}
+
+.qr-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.qr-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.qr-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.qr-box p {
+    margin-top: 8px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+th {
+    background-color: #ff9800;
+    color: white;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+</style>
+<body>
+  <section class="donation-options">
+    <h2>Support Priyanka's Treatment</h2>
+
+    <div class="donation-form">
+        <label for="donor-name">Your Name (Optional):</label>
+        <input type="text" id="donor-name" placeholder="Enter your name">
+
+        <label for="donation-amount">Amount to Donate (Optional):</label>
+        <input type="number" id="donation-amount" placeholder="Enter amount (₹)" min="1">
+
+        <button onclick="generateUPILink()">Proceed to Pay</button>
+    </div>
+
+    <h3>Scan & Pay via UPI</h3>
+    <div class="qr-grid">
+        <div class="qr-box">
+            <a id="qr1-link" href="#" target="_blank">
+                <img src="qr1.png" alt="UPI QR 1">
+            </a>
+            <p>UPI ID: upi1@bank</p>
+        </div>
+        <div class="qr-box">
+            <a id="qr2-link" href="#" target="_blank">
+                <img src="qr2.png" alt="UPI QR 2">
+            </a>
+            <p>UPI ID: upi2@bank</p>
+        </div>
+        <div class="qr-box">
+            <a id="qr3-link" href="#" target="_blank">
+                <img src="qr3.png" alt="UPI QR 3">
+            </a>
+            <p>UPI ID: upi3@bank</p>
+        </div>
+        <div class="qr-box">
+            <a id="qr4-link" href="#" target="_blank">
+                <img src="qr4.png" alt="UPI QR 4">
+            </a>
+            <p>UPI ID: upi4@bank</p>
+        </div>
+    </div>
+
+    <h2>Bank Transfer Details</h2>
+    <table>
+        <tr>
+            <th>Bank Name</th>
+            <th>Account Number</th>
+            <th>IFSC Code</th>
+            <th>Account Holder</th>
+        </tr>
+        <tr>
+            <td>HDFC Bank</td>
+            <td>1234567890</td>
+            <td>HDFC0001234</td>
+            <td>Priyanka's Fund</td>
+        </tr>
+        <tr>
+            <td>SBI Bank</td>
+            <td>0987654321</td>
+            <td>SBIN0005678</td>
+            <td>Priyanka's Fund</td>
+        </tr>
+        <tr>
+            <td>ICICI Bank</td>
+            <td>1122334455</td>
+            <td>ICIC0009876</td>
+            <td>Priyanka's Fund</td>
+        </tr>
+        <tr>
+            <td>Axis Bank</td>
+            <td>6677889900</td>
+            <td>AXIS0004321</td>
+            <td>Priyanka's Fund</td>
+        </tr>
+    </table>
+</section>
+
+<script>
+    function generateUPILink() {
+        let name = document.getElementById("donor-name").value;
+        let amount = document.getElementById("donation-amount").value;
+        
+        let upiID = "upi1@bank"; // Default UPI ID
+        let upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&cu=INR`;
+        
+        if (amount) {
+            upiLink += `&am=${amount}`;
+        }
+
+        // Update all QR code links
+        document.getElementById("qr1-link").href = upiLink;
+        document.getElementById("qr2-link").href = upiLink;
+        document.getElementById("qr3-link").href = upiLink;
+        document.getElementById("qr4-link").href = upiLink;
+
+        alert("Click on any QR Code to proceed with payment!");
+    }
+</script>
+
+
+
+</body>
+</html>

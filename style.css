@@ -1,0 +1,120 @@
+.desktop-1,
+.desktop-1 * {
+  box-sizing: border-box;
+}
+.desktop-1 {
+  background: #000000;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.rectangle-1 {
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-12 {
+  background: radial-gradient(
+    closest-side,
+    rgba(68, 68, 68, 1) 0%,
+    rgba(13, 11, 11, 1) 67.00000166893005%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.your-contribution-makes-a-difference {
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 68px;
+  font-weight: 400;
+  position: absolute;
+  left: 131px;
+  top: 100px;
+  width: 2051.33px;
+  height: 561px;
+}
+.rectangle-2 {
+  background: #333333;
+  width: 86px;
+  height: 1024px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.every-contribution-brings-us-closer-to-healing-lives-and-making-a-real-difference-together-we-can-create-a-ripple-of-hope-and-support-for-those-in-need-one-donation-at-a-time {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 131px;
+  top: 380px;
+}
+.help {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 75.47169494628906px;
+  font-weight: 400;
+  position: absolute;
+  left: 695px;
+  top: 789px;
+}
+.home {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 21.302494049072266px;
+  font-weight: 400;
+  position: absolute;
+  left: 585px;
+  top: 51px;
+  width: 60.69px;
+  height: 35px;
+}
+.about {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 21.302494049072266px;
+  font-weight: 400;
+  position: absolute;
+  left: 673px;
+  top: 51px;
+}
+.contact {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 21.302494049072266px;
+  font-weight: 400;
+  position: absolute;
+  left: 783px;
+  top: 51px;
+}
+.faq-s {
+  color: #ffffff;
+  text-align: left;
+  font-family: "JockeyOne-Regular", sans-serif;
+  font-size: 21.302494049072266px;
+  font-weight: 400;
+  position: absolute;
+  left: 888px;
+  top: 51px;
+}
+.logo-of-helploca-1 {
+  width: 104px;
+  height: 113px;
+  position: absolute;
+  left: 97px;
+  top: 12px;
+  object-fit: cover;
+}
